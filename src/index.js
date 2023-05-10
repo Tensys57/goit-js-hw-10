@@ -15,7 +15,7 @@ refs.searchInput.addEventListener(
 );
 
 function searchHandler(ev) {
-  if (ev.target.value) {
+  if (ev.target.value !== '') {
     fetchCountries(ev.target.value.trim()).then(value => {
       if (value.length > 10) {
         Notiflix.Notify.info(
@@ -33,6 +33,7 @@ function searchHandler(ev) {
       }
     });
   }
+  cleaning();
 }
 
 function outputCountryCard(value) {
