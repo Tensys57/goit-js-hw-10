@@ -32,8 +32,8 @@ function searchHandler(ev) {
         );
       }
     });
+    cleaning();
   }
-  cleaning();
 }
 
 function outputCountryCard(value) {
